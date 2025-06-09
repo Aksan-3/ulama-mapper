@@ -1,5 +1,5 @@
 let ulamaData = {};
-fetch('https://opensheet.vercel.app/2PACX-1vQRca_kJ1FCF_Q9FbPcemioHkwNJDpYX6uyu3yNOnLD6KPhiGcU4YH-YmdOAT9GkTzWIrEiCjuno9Pb/Sheet1')
+fetch('https://opensheet.vercel.app/1S-d2DSuKmbmly8x6QEEqGzElaE-LDzO638lXdm-4aPY/Sheet1')
   .then(r => r.json())
   .then(rows => {
     ulamaData = {};
