@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+header { background: #2f4f4f; color: white; padding: 1rem; text-align: center; }
+main { display: flex; padding: 1rem; height: calc(100vh - 64px); }
+#map-container { flex: 1; }
+#info-panel { flex: 1; padding: 1rem; background: white; border-left: 2px solid #ccc; overflow-y: auto; }
+#info-panel button { margin: 0.2rem; padding: 0.5rem; }
+#ulama-list div { border-bottom: 1px solid #eee; margin: 0.5rem 0; padding-bottom: 0.5rem; }
