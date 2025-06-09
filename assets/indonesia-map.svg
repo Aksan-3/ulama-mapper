@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
-  <path id="Jawa Barat" d="M200,300 L300,300 L300,400 L200,400 Z" fill="#ccc" stroke="#666"/>
   <path id="Aceh" d="M100,100 L200,100 L200,200 L100,200 Z" fill="#ccc" stroke="#666"/>
+  <path id="Sumatera Utara" d="M220,100 L320,100 L320,200 L220,200 Z" fill="#ccc" stroke="#666"/>
+  <path id="Jawa Barat" d="M200,300 L300,300 L300,400 L200,400 Z" fill="#ccc" stroke="#666"/>
+  <path id="Yogyakarta" d="M320,300 L380,300 L380,360 L320,360 Z" fill="#ccc" stroke="#666"/>
+  <path id="Papua" d="M800,300 L900,300 L900,400 L800,400 Z" fill="#ccc" stroke="#666"/>
 </svg>
