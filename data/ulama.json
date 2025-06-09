@@ -1,0 +1,12 @@
+{
+  "Jawa Barat": {
+    "Fiqih": [
+      {"nama": "Nyai Laila", "institusi": "UIN Bandung", "bio": "Pengajar fiqih kontemporer."}
+    ]
+  },
+  "Aceh": {
+    "Hadis": [
+      {"nama": "Nyai Aisyah", "institusi": "Dayah Nurul", "bio": "Ahli hadis dan gender."}
+    ]
+  }
+}
