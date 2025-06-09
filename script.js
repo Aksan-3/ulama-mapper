@@ -1,40 +1,45 @@
-let ulamaData = {};
-fetch('data/ulama.json')
-  .then(r => r.json())
-  .then(data => { ulamaData = data; });
+google.charts.load('current', {
+  packages: ['corechart', 'table'],
+  callback: drawRegions
+});
 
-function loadMap() {
-  fetch('assets/indonesia-map.svg')
-    .then(r => r.text())
-    .then(svg => {
-      const c = document.getElementById('map-container');
-      c.innerHTML = svg;
-      c.querySelectorAll('path').forEach(path => {
-        path.style.cursor = 'pointer';
-        path.onclick = () => handleProvinceClick(path.id);
+function drawRegions() {
+  const url = 'https://docs.google.com/spreadsheets/d/1S-d2DSuKmbmly8x6QEEqGzElaE-LDzO638lXdm-4aPY/gviz/tq?sheet=Sheet1';
+
+  fetch(url)
+    .then(res => res.text())
+    .then(rep => {
+      const json = JSON.parse(rep.substr(47).slice(0, -2));
+      const rows = json.table.rows.map(r => ({
+        provinsi: r.c[0]?.v,
+        kepakaran: r.c[1]?.v,
+        ulama: r.c[2]?.v
+      }));
+
+      const svgObject = document.getElementById("svgMap");
+
+      svgObject.addEventListener("load", function () {
+        const svgDoc = svgObject.contentDocument;
+        const regions = svgDoc.querySelectorAll("a");
+
+        regions.forEach(region => {
+          region.style.cursor = 'pointer';
+          region.addEventListener("click", function () {
+            const id = region.id;
+            const filtered = rows.filter(r => r.provinsi === id);
+            let html = `<h3>${id}</h3>`;
+            if (filtered.length === 0) {
+              html += `<p><em>Belum ada data ulama.</em></p>`;
+            } else {
+              html += '<ul>';
+              filtered.forEach(r => {
+                html += `<li><strong>${r.ulama}</strong> – ${r.kepakaran}</li>`;
+              });
+              html += '</ul>';
+            }
+            document.getElementById("output").innerHTML = html;
+          });
+        });
       });
     });
 }
-function handleProvinceClick(p) {
-  document.getElementById('region-title').textContent = p;
-  const eL = document.getElementById('expertise-list');
-  const uL = document.getElementById('ulama-list');
-  eL.innerHTML = ''; uL.innerHTML = '';
-  const exps = Object.keys(ulamaData[p] || {});
-  exps.forEach(exp => {
-    const btn = document.createElement('button');
-    btn.textContent = exp;
-    btn.onclick = () => showUlamaList(p, exp);
-    eL.appendChild(btn);
-  });
-}
-function showUlamaList(prov, exp) {
-  const uL = document.getElementById('ulama-list');
-  uL.innerHTML = '';
-  (ulamaData[prov][exp] || []).forEach(u => {
-    const d = document.createElement('div');
-    d.innerHTML = `<h4>${u.nama}</h4><p><strong>${u.institusi}</strong></p><p>${u.bio}</p>`;
-    uL.appendChild(d);
-  });
-}
-document.addEventListener('DOMContentLoaded', loadMap);
