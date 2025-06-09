@@ -1,46 +1,40 @@
-const sheetURL = "https://docs.google.com/spreadsheets/d/1S-d2DSuKmbmly8x6QEEqGzElaE-LDzO638lXdm-4aPY/gviz/tq?sheet=Sheet1";
+let ulamaData = {};
+fetch('data/ulama.json')
+  .then(r => r.json())
+  .then(data => { ulamaData = data; });
 
-let rows = [];
-
-fetch(sheetURL)
-  .then(res => res.text())
-  .then(txt => {
-    const json = JSON.parse(txt.substring(47, txt.length - 2));
-    rows = json.table.rows.map(r => ({
-      provinsi: r.c[0]?.v,
-      kepakaran: r.c[1]?.v,
-      nama: r.c[2]?.v,
-      institusi: r.c[3]?.v,
-      bio: r.c[4]?.v
-    }));
-    initMapListeners(); // Pasang event klik setelah data siap
-  })
-  .catch(e => console.error("Error fetch sheet:", e));
-
-function initMapListeners() {
-  const svgObj = document.getElementById("svgMap");
-  svgObj.addEventListener("load", () => {
-    const svgDoc = svgObj.contentDocument;
-    svgDoc.querySelectorAll("a[id]").forEach(el => {
-      el.style.cursor = "pointer";
-      el.addEventListener("click", () => {
-        showUlama(el.id);
+function loadMap() {
+  fetch('assets/indonesia-map.svg')
+    .then(r => r.text())
+    .then(svg => {
+      const c = document.getElementById('map-container');
+      c.innerHTML = svg;
+      c.querySelectorAll('path').forEach(path => {
+        path.style.cursor = 'pointer';
+        path.onclick = () => handleProvinceClick(path.id);
       });
     });
+}
+function handleProvinceClick(p) {
+  document.getElementById('region-title').textContent = p;
+  const eL = document.getElementById('expertise-list');
+  const uL = document.getElementById('ulama-list');
+  eL.innerHTML = ''; uL.innerHTML = '';
+  const exps = Object.keys(ulamaData[p] || {});
+  exps.forEach(exp => {
+    const btn = document.createElement('button');
+    btn.textContent = exp;
+    btn.onclick = () => showUlamaList(p, exp);
+    eL.appendChild(btn);
   });
 }
-
-function showUlama(prov) {
-  const list = rows.filter(r => r.provinsi === prov);
-  const out = document.getElementById("output");
-  if (list.length === 0) {
-    out.innerHTML = `<h3>${prov}</h3><p><em>Tidak ada data ulama.</em></p>`;
-    return;
-  }
-  let html = `<h3>${prov}</h3><ul>`;
-  list.forEach(u => {
-    html += `<li><strong>${u.nama}</strong> (${u.kepakaran}) — <em>${u.institusi}</em><br>${u.bio}</li>`;
+function showUlamaList(prov, exp) {
+  const uL = document.getElementById('ulama-list');
+  uL.innerHTML = '';
+  (ulamaData[prov][exp] || []).forEach(u => {
+    const d = document.createElement('div');
+    d.innerHTML = `<h4>${u.nama}</h4><p><strong>${u.institusi}</strong></p><p>${u.bio}</p>`;
+    uL.appendChild(d);
   });
-  html += "</ul>";
-  out.innerHTML = html;
 }
+document.addEventListener('DOMContentLoaded', loadMap);
