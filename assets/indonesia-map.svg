@@ -1,7 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
-  <path id="Aceh" d="M100,100 L200,100 L200,200 L100,200 Z" fill="#ccc" stroke="#666"/>
-  <path id="Sumatera Utara" d="M220,100 L320,100 L320,200 L220,200 Z" fill="#ccc" stroke="#666"/>
-  <path id="Jawa Barat" d="M200,300 L300,300 L300,400 L200,400 Z" fill="#ccc" stroke="#666"/>
-  <path id="Yogyakarta" d="M320,300 L380,300 L380,360 L320,360 Z" fill="#ccc" stroke="#666"/>
-  <path id="Papua" d="M800,300 L900,300 L900,400 L800,400 Z" fill="#ccc" stroke="#666"/>
+<!-- File: assets/indonesia-map.svg -->
+<svg id="indonesia-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000">
+  <!-- Contoh representatif. Setiap provinsi direpresentasikan sebagai tombol di posisi geografis relatif. -->
+  <!-- Kamu bisa ganti styling/button positioning untuk visual lebih menarik -->
+  <g font-family="Arial" font-size="10" text-anchor="middle">
+    <a xlink:href="#" id="Aceh"><text x="100" y="80">Aceh</text></a>
+    <a xlink:href="#" id="Sumatera Utara"><text x="120" y="120">Sumatera Utara</text></a>
+    <a xlink:href="#" id="Sumatera Barat"><text x="100" y="160">Sumatera Barat</text></a>
+    <a xlink:href="#" id="Riau"><text x="130" y="180">Riau</text></a>
+    <a xlink:href="#" id="Kepulauan Riau"><text x="160" y="160">Kep. Riau</text></a>
+    <a xlink:href="#" id="Jambi"><text x="130" y="200">Jambi</text></a>
+    <a xlink:href="#" id="Bengkulu"><text x="100" y="220">Bengkulu</text></a>
+    <a xlink:href="#" id="Sumatera Selatan"><text x="140" y="240">Sumatera Selatan</text></a>
+    <a xlink:href="#" id="Lampung"><text x="140" y="270">Lampung</text></a>
+    <a xlink:href="#" id="Banten"><text x="180" y="280">Banten</text></a>
+    <a xlink:href="#" id="DKI Jakarta"><text x="200" y="260">DKI Jakarta</text></a>
+    <a xlink:href="#" id="Jawa Barat"><text x="220" y="280">Jawa Barat</text></a>
+    <a xlink:href="#" id="Jawa Tengah"><text x="250" y="300">Jawa Tengah</text></a>
+    <a xlink:href="#" id="DI Yogyakarta"><text x="250" y="320">DIY</text></a>
+    <a xlink:href="#" id="Jawa Timur"><text x="280" y="330">Jawa Timur</text></a>
+    <a xlink:href="#" id="Bali"><text x="320" y="340">Bali</text></a>
+    <a xlink:href="#" id="Nusa Tenggara Barat"><text x="360" y="350">NTB</text></a>
+    <a xlink:href="#" id="Nusa Tenggara Timur"><text x="400" y="360">NTT</text></a>
+    <a xlink:href="#" id="Kalimantan Barat"><text x="260" y="180">Kalbar</text></a>
+    <a xlink:href="#" id="Kalimantan Tengah"><text x="280" y="200">Kalteng</text></a>
+    <a xlink:href="#" id="Kalimantan Selatan"><text x="300" y="220">Kalsel</text></a>
+    <a xlink:href="#" id="Kalimantan Timur"><text x="320" y="180">Kaltim</text></a>
+    <a xlink:href="#" id="Kalimantan Utara"><text x="340" y="160">Kalut</text></a>
+    <a xlink:href="#" id="Sulawesi Utara"><text x="420" y="100">Sulut</text></a>
+    <a xlink:href="#" id="Gorontalo"><text x="430" y="120">Gorontalo</text></a>
+    <a xlink:href="#" id="Sulawesi Tengah"><text x="420" y="140">Sulteng</text></a>
+    <a xlink:href="#" id="Sulawesi Barat"><text x="400" y="160">Sulbar</text></a>
+    <a xlink:href="#" id="Sulawesi Selatan"><text x="420" y="180">Sulsel</text></a>
+    <a xlink:href="#" id="Sulawesi Tenggara"><text x="440" y="200">Sultra</text></a>
+    <a xlink:href="#" id="Maluku"><text x="500" y="250">Maluku</text></a>
+    <a xlink:href="#" id="Maluku Utara"><text x="520" y="230">Maluku Utara</text></a>
+    <a xlink:href="#" id="Papua Barat"><text x="580" y="200">Papua Barat</text></a>
+    <a xlink:href="#" id="Papua"><text x="600" y="220">Papua</text></a>
+    <a xlink:href="#" id="Papua Tengah"><text x="620" y="240">Papua Tengah</text></a>
+    <a xlink:href="#" id="Papua Pegunungan"><text x="640" y="260">Papua Pegunungan</text></a>
+    <a xlink:href="#" id="Papua Selatan"><text x="660" y="280">Papua Selatan</text></a>
+    <a xlink:href="#" id="Papua Barat Daya"><text x="580" y="240">Papua Barat Daya</text></a>
+  </g>
 </svg>
