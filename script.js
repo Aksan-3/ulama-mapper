@@ -1,15 +1,26 @@
 let ulamaData = {};
-fetch('https://opensheet.vercel.app/1S-d2DSuKmbmly8x6QEEqGzElaE-LDzO638lXdm-4aPY/Sheet1')
-  .then(r => r.json())
-  .then(rows => {
-    ulamaData = {};
-    rows.forEach(row => {
-      const { provinsi, kepakaran, nama, institusi, bio } = row;
-      if (!ulamaData[provinsi]) ulamaData[provinsi] = {};
-      if (!ulamaData[provinsi][kepakaran]) ulamaData[provinsi][kepakaran] = [];
-      ulamaData[provinsi][kepakaran].push({ nama, institusi, bio });
+
+fetch("https://spreadsheets.google.com/feeds/list/1S-d2DSuKmbmly8x6QEEqGzElaE-LDzO638lXdm-4aPY/od6/public/values?alt=json")
+  .then(response => response.json())
+  .then(data => {
+    data.feed.entry.forEach(entry => {
+      const prov = entry.gsx$provinsi.$t;
+      const kepakaran = entry.gsx$kepakaran.$t;
+      const nama = entry.gsx$nama.$t;
+      const institusi = entry.gsx$institusi.$t;
+      const bio = entry.gsx$bio.$t;
+
+      if (!ulamaData[prov]) ulamaData[prov] = {};
+      if (!ulamaData[prov][kepakaran]) ulamaData[prov][kepakaran] = [];
+
+      ulamaData[prov][kepakaran].push({ nama, institusi, bio });
     });
-  });
+
+    // panggil fungsi render setelah data dimuat
+    populateProvinceDropdown(); // misalnya ini memuat dropdown provinsi
+  })
+  .catch(err => console.error("Gagal ambil data dari Google Sheets:", err));
+
 
 function loadMap() {
   fetch('assets/indonesia-map.svg')
