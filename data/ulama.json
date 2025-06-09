@@ -1,12 +1,37 @@
 {
-  "Jawa Barat": {
-    "Fiqih": [
-      {"nama": "Nyai Laila", "institusi": "UIN Bandung", "bio": "Pengajar fiqih kontemporer."}
-    ]
-  },
   "Aceh": {
     "Hadis": [
-      {"nama": "Nyai Aisyah", "institusi": "Dayah Nurul", "bio": "Ahli hadis dan gender."}
+      {"nama": "Nyai Aisyah", "institusi": "Dayah Nurul", "bio": "Ahli hadis dan gender."},
+      {"nama": "Nyai Salmah", "institusi": "Dayah An-Nur", "bio": "Pengajar tafsir dan hadis."},
+      {"nama": "Ustazah Halimah", "institusi": "Pesantren Az-Zahra", "bio": "Aktif dalam dakwah perempuan."}
+    ]
+  },
+  "Sumatera Utara": {
+    "Fiqih": [
+      {"nama": "Nyai Rohana", "institusi": "IAIN Medan", "bio": "Mengajar fiqih keluarga."},
+      {"nama": "Nyai Hafsah", "institusi": "Pesantren Ar-Rahman", "bio": "Aktif dalam pemberdayaan perempuan."},
+      {"nama": "Ustazah Fatimah", "institusi": "Al-Washliyah", "bio": "Ahli fiqih ibadah dan sosial."}
+    ]
+  },
+  "Jawa Barat": {
+    "Fiqih": [
+      {"nama": "Nyai Laila", "institusi": "UIN Bandung", "bio": "Pengajar fiqih kontemporer."},
+      {"nama": "Ustazah Hani", "institusi": "Pesantren Al-Falah", "bio": "Aktif dalam pengembangan kurikulum islami."},
+      {"nama": "Nyai Siti", "institusi": "IAI Cirebon", "bio": "Pakar fiqih wanita dan keluarga."}
+    ]
+  },
+  "Yogyakarta": {
+    "Tafsir": [
+      {"nama": "Nyai Fatimah", "institusi": "UIN Sunan Kalijaga", "bio": "Peneliti tafsir dan hermeneutika."},
+      {"nama": "Nyai Azizah", "institusi": "IAI Yogyakarta", "bio": "Mengkaji tafsir berbasis gender."},
+      {"nama": "Ustazah Najwa", "institusi": "Ponpes Darul Hikmah", "bio": "Aktif di kajian tafsir tematik."}
+    ]
+  },
+  "Papua": {
+    "Akidah": [
+      {"nama": "Nyai Marsela", "institusi": "STAIN Papua", "bio": "Aktif dalam penguatan akidah lokal."},
+      {"nama": "Ustazah Rosa", "institusi": "Ponpes Al-Azhar", "bio": "Daiyah lintas budaya Papua."},
+      {"nama": "Nyai Grace", "institusi": "MUI Papua", "bio": "Pakar akidah dan dialog antar agama."}
     ]
   }
 }
