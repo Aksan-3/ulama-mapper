@@ -1,7 +1,15 @@
 let ulamaData = {};
-fetch('data/ulama.json')
+fetch('https://opensheet.vercel.app/2PACX-1vQRca_kJ1FCF_Q9FbPcemioHkwNJDpYX6uyu3yNOnLD6KPhiGcU4YH-YmdOAT9GkTzWIrEiCjuno9Pb/Sheet1')
   .then(r => r.json())
-  .then(data => { ulamaData = data; });
+  .then(rows => {
+    ulamaData = {};
+    rows.forEach(row => {
+      const { provinsi, kepakaran, nama, institusi, bio } = row;
+      if (!ulamaData[provinsi]) ulamaData[provinsi] = {};
+      if (!ulamaData[provinsi][kepakaran]) ulamaData[provinsi][kepakaran] = [];
+      ulamaData[provinsi][kepakaran].push({ nama, institusi, bio });
+    });
+  });
 
 function loadMap() {
   fetch('assets/indonesia-map.svg')
