@@ -1,46 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg id="indonesia-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
-  <style>
-    text { font-size: 12px; font-family: Arial; }
-    a:hover rect { fill: orange; }
-  </style>
-  <a id="Aceh"><rect x="50" y="50" width="160" height="40" fill="#cce5ff"/><text x="55" y="75">Aceh</text></a>
-<a id="Sumatera Utara"><rect x="230" y="50" width="160" height="40" fill="#cce5ff"/><text x="235" y="75">Sumatera Utara</text></a>
-<a id="Sumatera Barat"><rect x="410" y="50" width="160" height="40" fill="#cce5ff"/><text x="415" y="75">Sumatera Barat</text></a>
-<a id="Riau"><rect x="590" y="50" width="160" height="40" fill="#cce5ff"/><text x="595" y="75">Riau</text></a>
-<a id="Kepulauan Riau"><rect x="770" y="50" width="160" height="40" fill="#cce5ff"/><text x="775" y="75">Kepulauan Riau</text></a>
-<a id="Jambi"><rect x="950" y="50" width="160" height="40" fill="#cce5ff"/><text x="955" y="75">Jambi</text></a>
-<a id="Sumatera Selatan"><rect x="50" y="110" width="160" height="40" fill="#cce5ff"/><text x="55" y="135">Sumatera Selatan</text></a>
-<a id="Bengkulu"><rect x="230" y="110" width="160" height="40" fill="#cce5ff"/><text x="235" y="135">Bengkulu</text></a>
-<a id="Lampung"><rect x="410" y="110" width="160" height="40" fill="#cce5ff"/><text x="415" y="135">Lampung</text></a>
-<a id="Bangka Belitung"><rect x="590" y="110" width="160" height="40" fill="#cce5ff"/><text x="595" y="135">Bangka Belitung</text></a>
-<a id="DKI Jakarta"><rect x="770" y="110" width="160" height="40" fill="#cce5ff"/><text x="775" y="135">DKI Jakarta</text></a>
-<a id="Jawa Barat"><rect x="950" y="110" width="160" height="40" fill="#cce5ff"/><text x="955" y="135">Jawa Barat</text></a>
-<a id="Banten"><rect x="50" y="170" width="160" height="40" fill="#cce5ff"/><text x="55" y="195">Banten</text></a>
-<a id="Jawa Tengah"><rect x="230" y="170" width="160" height="40" fill="#cce5ff"/><text x="235" y="195">Jawa Tengah</text></a>
-<a id="DI Yogyakarta"><rect x="410" y="170" width="160" height="40" fill="#cce5ff"/><text x="415" y="195">DI Yogyakarta</text></a>
-<a id="Jawa Timur"><rect x="590" y="170" width="160" height="40" fill="#cce5ff"/><text x="595" y="195">Jawa Timur</text></a>
-<a id="Bali"><rect x="770" y="170" width="160" height="40" fill="#cce5ff"/><text x="775" y="195">Bali</text></a>
-<a id="Nusa Tenggara Barat"><rect x="950" y="170" width="160" height="40" fill="#cce5ff"/><text x="955" y="195">Nusa Tenggara Barat</text></a>
-<a id="Nusa Tenggara Timur"><rect x="50" y="230" width="160" height="40" fill="#cce5ff"/><text x="55" y="255">Nusa Tenggara Timur</text></a>
-<a id="Kalimantan Barat"><rect x="230" y="230" width="160" height="40" fill="#cce5ff"/><text x="235" y="255">Kalimantan Barat</text></a>
-<a id="Kalimantan Tengah"><rect x="410" y="230" width="160" height="40" fill="#cce5ff"/><text x="415" y="255">Kalimantan Tengah</text></a>
-<a id="Kalimantan Selatan"><rect x="590" y="230" width="160" height="40" fill="#cce5ff"/><text x="595" y="255">Kalimantan Selatan</text></a>
-<a id="Kalimantan Timur"><rect x="770" y="230" width="160" height="40" fill="#cce5ff"/><text x="775" y="255">Kalimantan Timur</text></a>
-<a id="Kalimantan Utara"><rect x="950" y="230" width="160" height="40" fill="#cce5ff"/><text x="955" y="255">Kalimantan Utara</text></a>
-<a id="Sulawesi Utara"><rect x="50" y="290" width="160" height="40" fill="#cce5ff"/><text x="55" y="315">Sulawesi Utara</text></a>
-<a id="Sulawesi Tengah"><rect x="230" y="290" width="160" height="40" fill="#cce5ff"/><text x="235" y="315">Sulawesi Tengah</text></a>
-<a id="Sulawesi Selatan"><rect x="410" y="290" width="160" height="40" fill="#cce5ff"/><text x="415" y="315">Sulawesi Selatan</text></a>
-<a id="Sulawesi Tenggara"><rect x="590" y="290" width="160" height="40" fill="#cce5ff"/><text x="595" y="315">Sulawesi Tenggara</text></a>
-<a id="Gorontalo"><rect x="770" y="290" width="160" height="40" fill="#cce5ff"/><text x="775" y="315">Gorontalo</text></a>
-<a id="Sulawesi Barat"><rect x="950" y="290" width="160" height="40" fill="#cce5ff"/><text x="955" y="315">Sulawesi Barat</text></a>
-<a id="Maluku"><rect x="50" y="350" width="160" height="40" fill="#cce5ff"/><text x="55" y="375">Maluku</text></a>
-<a id="Maluku Utara"><rect x="230" y="350" width="160" height="40" fill="#cce5ff"/><text x="235" y="375">Maluku Utara</text></a>
-<a id="Papua Barat"><rect x="410" y="350" width="160" height="40" fill="#cce5ff"/><text x="415" y="375">Papua Barat</text></a>
-<a id="Papua"><rect x="590" y="350" width="160" height="40" fill="#cce5ff"/><text x="595" y="375">Papua</text></a>
-<a id="Papua Tengah"><rect x="770" y="350" width="160" height="40" fill="#cce5ff"/><text x="775" y="375">Papua Tengah</text></a>
-<a id="Papua Pegunungan"><rect x="950" y="350" width="160" height="40" fill="#cce5ff"/><text x="955" y="375">Papua Pegunungan</text></a>
-<a id="Papua Selatan"><rect x="50" y="410" width="160" height="40" fill="#cce5ff"/><text x="55" y="435">Papua Selatan</text></a>
-<a id="Papua Barat Daya"><rect x="230" y="410" width="160" height="40" fill="#cce5ff"/><text x="235" y="435">Papua Barat Daya</text></a>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+  <path id="Aceh" d="M100,100 L200,100 L200,200 L100,200 Z" fill="#ccc" stroke="#666"/>
+  <path id="Sumatera Utara" d="M220,100 L320,100 L320,200 L220,200 Z" fill="#ccc" stroke="#666"/>
+  <path id="Jawa Barat" d="M200,300 L300,300 L300,400 L200,400 Z" fill="#ccc" stroke="#666"/>
+  <path id="Yogyakarta" d="M320,300 L380,300 L380,360 L320,360 Z" fill="#ccc" stroke="#666"/>
+  <path id="Papua" d="M800,300 L900,300 L900,400 L800,400 Z" fill="#ccc" stroke="#666"/>
 </svg>
