@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pemetaan Ulama Perempuan Indonesia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>Pemetaan Ulama Perempuan Indonesia</h1></header>
+  <main>
+    <div id="map-container"></div>
+    <div id="info-panel">
+      <h2 id="region-title">Pilih Provinsi</h2>
+      <div id="expertise-list"></div>
+      <div id="ulama-list"></div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
